@@ -2,10 +2,15 @@
 
 namespace App\Controllers;
 
+use App\Core\View;
+
 class IndexController
 {
     public function index(): string
     {
-        return "Hello World 🚀";
+        return View::render('home', [
+            'title' => 'MVC Framework',
+            'message' => 'Hello from controller'
+        ]);
     }
 }
