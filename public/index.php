@@ -9,3 +9,4 @@ $router = $app->router;
 require_once __DIR__ . '/../routes/web.php';
 
 $app->run();
+

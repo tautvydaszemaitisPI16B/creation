@@ -44,6 +44,25 @@ class Router
     }
 
     /**
+     * Register a POST route.
+     *
+     * Example:
+     * $router->post('/users', [UserController::class, 'store']);
+     *
+     * Or:
+     * $router->post('/submit', fn () => 'Submitted');
+     *
+     * @param string $path Route URI path.
+     * @param callable|array $action Route action callback or controller action.
+     *
+     * @return void
+     */
+    public function post(string $path, callable|array $action): void
+    {
+        $this->routes['POST'][$path] = $action;
+    }
+
+    /**
      * Dispatches the incoming request.
      *
      * Finds a matching route and executes its action.
