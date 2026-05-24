@@ -8,7 +8,7 @@ class IndexController
 {
     public function index(): string
     {
-        return View::render('home', [
+        return View::render('index', [
             'title' => 'MVC Framework',
             'message' => 'Hello from controller'
         ]);
